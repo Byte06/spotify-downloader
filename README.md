@@ -14,14 +14,15 @@ Download Spotify playlists and songs by name and URL.
 
 
 ### How to set up FFmpeg:
-1. Download [FFmpeg](https://drive.google.com/drive/folders/19JMqSgDCQXPytzBdTguW7UtHIlrCN9Io?usp=sharing) and unzip to your c-drive -> C:\ffmpeg 
-2. [Add ffmpeg bin to PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/)
+1. Download [FFmpeg](https://drive.google.com/drive/folders/19JMqSgDCQXPytzBdTguW7UtHIlrCN9Io?usp=sharing) and unzip to your c-drive:
+   - Destination folder: C:\ffmpeg
+2. [Add ffmpeg bin to PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/):
     - PATH: C:\ffmpeg\bin
 3. Verify installation via command prompt:
-    - ffmpeg -version
-4. Try restarting your computer if the installation isn't verified.
+    - Command: ffmpeg -version
+4. If the installation isn't verified, try restarting your computer.
 
-Please follow the steps _carefully_, otherwise you'll run in trouble.
+Please follow the instructions, otherwise you'll run in trouble.
 
 
-Creator: [Patrik Martic](https://about-patrik.netlify.app)
+Creator: [Patrik Martić](https://about-patrik.netlify.app)
