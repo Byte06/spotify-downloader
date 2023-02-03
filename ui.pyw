@@ -42,10 +42,15 @@ def read_location():
         with open("download-location.txt") as f:
             location = f.readlines()
         location = ' '.join([str(elem) for elem in location])
+        if not os.path.isdir(location):
+            user = os.environ["USERPROFILE"]
+            location = f"{user}\\Downloads"
+            with open("download-location.txt", "w") as f:
+                f.write(location)
     else:
         user = os.environ["USERPROFILE"]
         location = f"{user}\\Downloads"
-        with open("download-location.txt", "w") as f:  # Opens file and casts as f
+        with open("download-location.txt", "w") as f:
             f.write(location)
 
     return location
