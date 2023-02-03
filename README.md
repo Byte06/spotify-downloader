@@ -14,8 +14,8 @@ Download your Spotify playlists and songs along with album art and metadata.
 
 
 ### How to set up FFmpeg:
-1. Copy "ffmpeg" folder to your c-drive -> C:\ffmpeg 
-2. [Add the ffmpeg bin to PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/)
+1. Download [FFmpeg](https://drive.google.com/drive/folders/19JMqSgDCQXPytzBdTguW7UtHIlrCN9Io?usp=sharing) and unzip to your c-drive -> C:\ffmpeg 
+2. [Add ffmpeg bin to PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/)
     - PATH: C:\ffmpeg\bin
 3. Verify installation via command prompt:
     - ffmpeg -version
