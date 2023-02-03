@@ -1,6 +1,7 @@
 import tkinter.filedialog
 from tkinter import *
 import os
+import os.path
 
 # Frame Settings
 root = Tk()
@@ -37,14 +38,16 @@ drop.pack(pady=10)
 
 
 def read_location():
-    filesize = os.path.getsize("download-location.txt")
-    if filesize == 0:
-        user = os.environ["USERPROFILE"]
-        location = f"{user}\\Downloads"
-    else:
-        with open('download-location.txt') as f:
+    if os.path.isfile("download-location.txt"):
+        with open("download-location.txt") as f:
             location = f.readlines()
         location = ' '.join([str(elem) for elem in location])
+    else:
+        user = os.environ["USERPROFILE"]
+        location = f"{user}\\Downloads"
+        with open("download-location.txt", "w") as f:  # Opens file and casts as f
+            f.write(location)
+
     return location
 
 
