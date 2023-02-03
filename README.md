@@ -19,7 +19,7 @@
 - **spotdl**: pip install spotdl
 
 
-### How to set up FFmpeg:
+### How to set up FFmpeg (Windows):
 1. **Download [FFmpeg](https://drive.google.com/drive/folders/19JMqSgDCQXPytzBdTguW7UtHIlrCN9Io?usp=sharing) and unzip to your c-drive:**
    - Destination folder: C:\ffmpeg
 2. **[Add ffmpeg bin to PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/):**
