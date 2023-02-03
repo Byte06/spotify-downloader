@@ -1,6 +1,6 @@
 # Spotify Downloader
 
-Download your Spotify playlists and songs along with album art and metadata.
+Download Spotify playlists and songs by name and URL.
 > Spotify Downloader uses spotdl. The songs are downloaded from YouTube. Wrong downloads can occur as the song with the best match is downloaded.
 
 
