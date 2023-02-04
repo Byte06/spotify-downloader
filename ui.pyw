@@ -2,9 +2,7 @@ import tkinter.filedialog
 from tkinter import *
 import os
 import os.path
-from random import randint
 
-import spotdl.download.ffmpeg
 
 # Frame Settings
 root = Tk()
