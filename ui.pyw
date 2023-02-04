@@ -84,8 +84,7 @@ startDownload = Button(root, text="Download", command=lambda: [download()], bg="
 startDownload.pack()
 
 # Change Download Location Button
-change_download_location = Button(root, text=f"Change current download location?:\n{read_location()}",
-                                  font='Helvetica 9', command=lambda: [change_location()])
+change_download_location = Button(root, text=f"Change current download location?:\n{read_location()}", font='Helvetica 9', command=lambda: [change_location()])
 change_download_location.pack(pady=20)
 
 root.mainloop()
