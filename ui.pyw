@@ -2,6 +2,9 @@ import tkinter.filedialog
 from tkinter import *
 import os
 import os.path
+from random import randint
+
+import spotdl.download.ffmpeg
 
 # Frame Settings
 root = Tk()
@@ -39,19 +42,18 @@ drop.pack(pady=10)
 
 def read_location():
     if os.path.isfile("download-location.txt"):
-        with open("download-location.txt") as f:
-            location = f.readlines()
-        location = ' '.join([str(elem) for elem in location])
+        with open("download-location.txt") as file:
+            location = file.read().rstrip()
         if not os.path.isdir(location):
             user = os.environ["USERPROFILE"]
             location = f"{user}\\Downloads"
-            with open("download-location.txt", "w") as f:
-                f.write(location)
+            with open("download-location.txt", "w") as file:
+                file.write(location)
     else:
         user = os.environ["USERPROFILE"]
         location = f"{user}\\Downloads"
-        with open("download-location.txt", "w") as f:
-            f.write(location)
+        with open("download-location.txt", "w") as file:
+            file.write(location)
 
     return location
 
@@ -68,10 +70,13 @@ def change_location():
 def download():
     url = e.get()
     output_format = clicked.get()
-    if url and output_format != "Choose format":
+    if url and output_format != "Choose format":  #
         location = read_location()
-        os.system(f"cmd /c spotdl \"{url}\" --output-format {output_format} --output \"{location}\" --ignore-ffmpeg-version")
-        os.remove(f"{location}\\.spotdl-cache")
+        os.system(f"cmd /c spotdl \"{url}\" --output-format {output_format} --output \"{location}\" --ignore-ffmpeg-version --lyrics-provider genius")
+        try:
+            os.remove(f"{location}\\.spotdl-cache")
+        except:
+            pass
 
 
 # Download Button
